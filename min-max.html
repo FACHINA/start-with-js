@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    const noms = [];
+    const ages = [];
+    const nbEnfant = parseInt(prompt("Vous avez combien de frères"));
+
+    for (i = 0; i < nbEnfant; i++) {
+      const nom = prompt(`Le nom du frere numrero ${i + 1}`);
+      noms[i] = nom;
+    }
+
+    for (i = 0; i < nbEnfant; i++) {
+      const age = prompt(`L'age de ${noms[i]}`);
+      ages[i] = age;
+    }
+
+    const maxAge = Math.max(...ages);
+    const minAge = Math.min(...ages);
+    const indexDuPlusAge = ages.findIndex(age => age == maxAge);
+    const indexDuMoinAge = ages.findIndex(age => age == minAge);
+
+    alert(`Le plus agee c'est ${noms[indexDuPlusAge]}`)
+    alert(`Le plus petit c'est ${noms[indexDuMoinAge]}`)
+
+
+  </script>
+
+</body>
+
+</html>
