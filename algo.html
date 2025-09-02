@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    function multiplication(nombre) {
+      let tableau = "";
+      for (i = 1; i <= 12; i++) {
+        const ligne = `${nombre} * ${i} = ${nombre * i} \n`;
+        tableau = tableau + ligne;
+      }
+      alert(tableau);
+    }
+
+    function addition(nombre) {
+      let tableau = "";
+      for (i = 1; i <= 12; i++) {
+        const ligne = `${nombre} + ${i} = ${parseInt(nombre) + i} \n`;
+        tableau = tableau + ligne;
+      }
+      alert(tableau);
+    }
+
+    function division(nombre) {
+      let tableau = "";
+      for (i = 1; i <= 12; i++) {
+        const ligne = `${nombre} / ${i} = ${parseInt(nombre) / i} \n`;
+        tableau = tableau + ligne;
+      }
+      alert(tableau);
+    }
+
+
+    function soustraction(nombre) {
+      let tableau = "";
+      for (i = 1; i <= 12; i++) {
+        const ligne = `${nombre} - ${i} = ${parseInt(nombre) - i} \n`;
+        tableau = tableau + ligne;
+      }
+      alert(tableau);
+    }
+
+    const nombre = prompt("Entrez un nombre de 1 à 12")
+    const choix = prompt("Quelle opération souhaitiez vous effectuer (+,*,-,/)")
+
+    switch (choix) {
+      case "+":
+        addition(nombre);
+        break;
+      case "*":
+        multiplication(nombre);
+        break;
+      case "-":
+        soustraction(nombre);
+        break;
+      case "/":
+        division(nombre);
+        break;
+      default:
+        alert("Mauvai choix")
+        break;
+    }
+
+    multiplication(nombre);
+
+  </script>
+
+</body>
+
+</html>
